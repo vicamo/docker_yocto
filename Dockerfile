@@ -5,6 +5,7 @@ MAINTAINER vicamo@gmail.com
 RUN apt-get update -qq \
 	&& apt-get install --no-install-recommends -y --force-yes \
 		chrpath \
+		ccache \
 		cpio \
 		diffstat \
 		texinfo \
