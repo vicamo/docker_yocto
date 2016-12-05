@@ -3,7 +3,7 @@ FROM buildpack-deps
 MAINTAINER vicamo@gmail.com
 
 RUN apt-get update -qq \
-	&& apt-get install --no-install-recommends -y --force-yes \
+	&& apt-get install --no-install-recommends -y \
 		ccache \
 		chrpath \
 		cpio \
