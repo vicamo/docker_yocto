@@ -9,6 +9,7 @@ RUN apt-get update -qq \
 		cpio \
 		diffstat \
 		gawk \
+		python3 \
 		texinfo \
 	&& apt-get clean \
 	&& rm -f /var/lib/apt/lists/*_dists_*
