@@ -1,0 +1,19 @@
+sudo: required
+services:
+- docker
+
+env:
+  matrix:
+  - SUITE=jessie
+  - SUITE=stretch
+  - SUITE=sid
+  - SUITE=precise
+  - SUITE=trusty
+  - SUITE=xenial
+  - SUITE=yakkety
+
+branches:
+  only: master
+
+script:
+- docker build $SUITE
