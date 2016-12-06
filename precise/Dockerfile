@@ -12,8 +12,11 @@ RUN apt-get update -qq \
 		locales \
 		python3 \
 		texinfo \
-	&& sed -i -e 's,^# en_US,en_US,' /etc/locale.gen \
-	&& locale-gen \
-	&& update-locale LANG=en_US.UTF-8 LANGUAGE \
 	&& apt-get clean \
 	&& rm -f /var/lib/apt/lists/*_dists_*
+
+RUN (echo "en_US.UTF-8 UTF-8"; \
+		echo "en_US ISO-8859-1"; \
+		echo "en_US.ISO-8859-15 ISO-8859-15") >/var/lib/locales/supported.d/bitbake.conf \
+	&& locale-gen \
+	&& update-locale LANG=en_US.UTF-8 LANGUAGE
