@@ -1,4 +1,4 @@
-FROM buildpack-deps
+FROM buildpack-deps:stretch
 
 MAINTAINER vicamo@gmail.com
 
