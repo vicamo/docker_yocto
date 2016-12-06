@@ -8,7 +8,6 @@ env:
   - SUITE=jessie
   - SUITE=stretch
   - SUITE=sid
-  - SUITE=precise
   - SUITE=trusty
   - SUITE=xenial
   - SUITE=yakkety
