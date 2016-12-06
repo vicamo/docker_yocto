@@ -1,3 +1,4 @@
+dist: trusty
 sudo: required
 services:
 - docker
@@ -15,5 +16,9 @@ env:
 branches:
   only: master
 
+install:
+- git clone --depth 1 -b krogoth git://git.yoctoproject.org/poky.git ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky
+
 script:
-- docker build $SUITE
+- docker build -t vicamo/yocto:test $SUITE
+- docker run --rm -v ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky:/poky --workdir /poky vicamo/yocto:test /bin/bash -c "source oe-init-build-env; bitbake -h; bitbake automake-native"
