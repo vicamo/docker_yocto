@@ -12,6 +12,7 @@ RUN apt-get update -qq \
 		cpio \
 		diffstat \
 		gawk \
+		iptables \
 		locales \
 		python3 \
 		sudo \
