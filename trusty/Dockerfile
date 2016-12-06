@@ -37,4 +37,5 @@ RUN useradd --comment 'Yocto Development Account' \
 
 VOLUME ["${YOCTO_HOME}"]
 WORKDIR ${YOCTO_HOME}
+ENV LANG=en_US.UTF-8
 USER ${YOCTO_USER}
