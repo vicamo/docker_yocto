@@ -22,6 +22,8 @@ install:
 
 script:
 - docker build --tag vicamo/yocto:test $SUITE
+- sudo chown -R $(docker run --rm vicamo/yocto:test id -u).$(docker run --rm vicamo/yocto:test id -g)
+    ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky
 - docker run --rm
     --volume ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky:/poky
     --workdir /poky
