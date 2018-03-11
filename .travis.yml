@@ -4,6 +4,8 @@ services:
 - docker
 
 env:
+  global:
+  - YOCTO_RELEASE=rocko
   matrix:
   - SUITE=artful
   - SUITE=bionic
@@ -18,7 +20,7 @@ branches:
   only: master
 
 install:
-- git clone --depth 1 -b krogoth git://git.yoctoproject.org/poky.git ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky
+- git clone --depth 1 -b ${YOCTO_RELEASE} git://git.yoctoproject.org/poky.git ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky
 
 script:
 - docker build --tag vicamo/yocto:test $SUITE
