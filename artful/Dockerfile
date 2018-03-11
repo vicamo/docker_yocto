@@ -1,6 +1,6 @@
 # GENERATED FROM DOCKERFILE.TEMPLATE. DO NOT EDIT.
 
-FROM buildpack-deps:yakkety
+FROM buildpack-deps:artful
 
 MAINTAINER vicamo@gmail.com
 

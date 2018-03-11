@@ -5,12 +5,14 @@ services:
 
 env:
   matrix:
+  - SUITE=artful
+  - SUITE=bionic
+  - SUITE=buster
   - SUITE=jessie
   - SUITE=sid
   - SUITE=stretch
   - SUITE=trusty
   - SUITE=xenial
-  - SUITE=yakkety
 
 branches:
   only: master
