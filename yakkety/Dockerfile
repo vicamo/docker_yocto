@@ -1,3 +1,5 @@
+# GENERATED FROM DOCKERFILE.TEMPLATE. DO NOT EDIT.
+
 FROM buildpack-deps:yakkety
 
 MAINTAINER vicamo@gmail.com

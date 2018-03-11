@@ -1,6 +1,6 @@
 # GENERATED FROM DOCKERFILE.TEMPLATE. DO NOT EDIT.
 
-FROM buildpack-deps:jessie
+FROM buildpack-deps:@SUITE@
 
 MAINTAINER vicamo@gmail.com
 

@@ -6,8 +6,8 @@ services:
 env:
   matrix:
   - SUITE=jessie
-  - SUITE=stretch
   - SUITE=sid
+  - SUITE=stretch
   - SUITE=trusty
   - SUITE=xenial
   - SUITE=yakkety
