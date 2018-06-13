@@ -23,7 +23,8 @@ install:
 - git clone --depth 1 -b ${YOCTO_RELEASE} git://git.yoctoproject.org/poky.git ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky
 
 script:
-- docker build --tag vicamo/yocto:test $SUITE
+- docker build --tag vicamo/yocto:$SUITE $SUITE
+- cat Dockerfile.ci | sed -e "s,@SUITE@,${SUITE}," | docker build --tag vicamo/yocto:test -
 - sudo chown -R $(docker run --rm vicamo/yocto:test id -u).$(docker run --rm vicamo/yocto:test id -g)
     ${TRAVIS_BUILD_DIR%/${TRAVIS_REPO_SLUG}}/poky
 - docker run --rm

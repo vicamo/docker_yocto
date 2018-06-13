@@ -1,0 +1,19 @@
+# GENERATED FROM DOCKERFILE.TEMPLATE. DO NOT EDIT.
+
+FROM vicamo/yocto:@SUITE@
+
+ENV YOCTO_USER=yocto
+ENV YOCTO_HOME=/home/${YOCTO_USER}
+
+RUN useradd --comment 'Yocto Development Account' \
+		--home ${YOCTO_HOME} --create-home \
+		--shell /bin/bash \
+		${YOCTO_USER} \
+	&& (echo "${YOCTO_USER}:${YOCTO_USER}" | chpasswd) \
+	&& adduser ${YOCTO_USER} sudo \
+	&& (echo "${YOCTO_USER} ALL=NOPASSWD: ALL" > /etc/sudoers.d/${YOCTO_USER}) \
+	&& chmod 0440 /etc/sudoers.d/${YOCTO_USER}
+
+VOLUME ["${YOCTO_HOME}"]
+WORKDIR ${YOCTO_HOME}
+USER ${YOCTO_USER}
