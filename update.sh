@@ -12,7 +12,10 @@ suites=( "${suites[@]%/}" )
 travisEnv=
 for suite in $(for s in "${suites[@]}"; do echo $s; done | sort -r); do
   travisEnv='\n  - SUITE='"$suite$travisEnv";
-  [ -n "$(head -n1 $suite/Dockerfile | grep GENERATED)" ] || continue;
+  if [ -z "$(head -n1 $suite/Dockerfile | grep GENERATED)" ]; then
+    echo "Skipping $suite ... ";
+    continue;
+  fi
 
   cat Dockerfile.template | \
     sed -e "s,@SUITE@,$suite,g" \
