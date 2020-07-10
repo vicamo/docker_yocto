@@ -12,6 +12,7 @@ RUN apt-get update -qq \
 		iptables \
 		locales \
 		python3 \
+		$(which realpath >/dev/null 2>&1 || echo realpath) \
 		sudo \
 		texinfo \
 	&& apt-get clean \
