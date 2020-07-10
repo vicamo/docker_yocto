@@ -1,6 +1,6 @@
 # GENERATED FROM DOCKERFILE.TEMPLATE. DO NOT EDIT.
 
-FROM buildpack-deps:buster
+FROM buildpack-deps:eoan
 
 MAINTAINER vicamo@gmail.com
 

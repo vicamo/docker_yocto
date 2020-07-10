@@ -1,6 +1,6 @@
 # GENERATED FROM DOCKERFILE.TEMPLATE. DO NOT EDIT.
 
-FROM buildpack-deps:cosmic
+FROM buildpack-deps:groovy
 
 MAINTAINER vicamo@gmail.com
 
@@ -14,6 +14,7 @@ RUN apt-get update -qq \
 		iptables \
 		locales \
 		python3 \
+		$(which realpath >/dev/null 2>&1 || echo realpath) \
 		sudo \
 		texinfo \
 	&& apt-get clean \
