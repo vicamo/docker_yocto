@@ -7,10 +7,8 @@ env:
   global:
   - YOCTO_RELEASE=rocko
   matrix:
-  - SUITE=artful
   - SUITE=bionic
   - SUITE=buster
-  - SUITE=cosmic
   - SUITE=jessie
   - SUITE=sid
   - SUITE=stretch
