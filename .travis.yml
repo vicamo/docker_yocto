@@ -9,6 +9,9 @@ env:
   matrix:
   - SUITE=bionic
   - SUITE=buster
+  - SUITE=eoan
+  - SUITE=focal
+  - SUITE=groovy
   - SUITE=jessie
   - SUITE=sid
   - SUITE=stretch
