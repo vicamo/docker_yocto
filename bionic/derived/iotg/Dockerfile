@@ -10,6 +10,7 @@ RUN apt-get update -qq \
 		libelf-dev \
 		libsdl1.2-dev \
 		patchutils \
+		repo \
 		socat \
 		wget \
 	&& apt-get clean \
