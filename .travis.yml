@@ -14,6 +14,7 @@ env:
   - SUITE=buster
   - SUITE=focal
   - SUITE=groovy
+  - SUITE=hirsute
   - SUITE=jessie
   - SUITE=sid
   - SUITE=stretch
