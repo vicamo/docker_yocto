@@ -7,6 +7,7 @@ env:
   global:
   - YOCTO_RELEASE=master
   - YOCTO_RELEASE_jessie=warrior
+  - YOCTO_RELEASE_stretch=gatesgarth
   - YOCTO_RELEASE_trusty=warrior
   - YOCTO_RELEASE_xenial=zeus
   matrix:
