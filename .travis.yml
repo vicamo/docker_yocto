@@ -7,14 +7,15 @@ env:
   global:
   - YOCTO_RELEASE=master
   - YOCTO_RELEASE_jessie=warrior
+  - YOCTO_RELEASE_stretch=gatesgarth
   - YOCTO_RELEASE_trusty=warrior
   - YOCTO_RELEASE_xenial=zeus
   matrix:
   - SUITE=bionic
   - SUITE=buster
-  - SUITE=eoan
   - SUITE=focal
   - SUITE=groovy
+  - SUITE=hirsute
   - SUITE=jessie
   - SUITE=sid
   - SUITE=stretch

@@ -1,6 +1,6 @@
 # GENERATED FROM DOCKERFILE.TEMPLATE. DO NOT EDIT.
 
-FROM buildpack-deps:eoan
+FROM buildpack-deps:hirsute
 
 MAINTAINER vicamo@gmail.com
 
